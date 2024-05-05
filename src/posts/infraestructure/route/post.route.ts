@@ -1,5 +1,6 @@
-import { Router } from "express";
-import { setupPost } from "../../dependencies/post.dependencies";
+import { Router } from "express"
+import { setupPost } from "../../../dependencies/post.dependencies"
+
 
 const postRoute = Router()
 const postController = setupPost()
