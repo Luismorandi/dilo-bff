@@ -1,6 +1,5 @@
 import cors from "cors";
 import  express  from "express";
-import dbInit from "./posts/infraestructure/db/mongo";
 import postRoute from "./posts/infraestructure/route/post.route";
 import dotenv from 'dotenv';
 
@@ -13,14 +12,13 @@ app.use(cors())
 app.use(postRoute)
 
 
-const PORT = 3000
+const PORT = 3100
 
 app.get('/health', (_req,res)=>{
     res.send('healthy')
 
 })
 
-dbInit().then()
 
 app.listen(PORT, () => {
     console.log(`listening on ${PORT}`)

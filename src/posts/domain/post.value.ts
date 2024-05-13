@@ -1,15 +1,12 @@
-import { PostEntity, PostEntityDT0 } from "./posts.entity";
-import { v4  as uuid} from "uuid";
+import { PostEntity } from "./posts.entity";
 
 
 export class PostValue implements PostEntity{
     content: string;
     user: string;
     token: string;
-    uuid: string;
 
-    constructor({content, user, token}:PostEntityDT0){
-        this.uuid = uuid(),
+    constructor({content, user, token}: PostEntity){
         this.content = content,
         this.user = user,
         this.token = token
